@@ -1,0 +1,25 @@
+{
+  "schema": "vela.event.v0.1",
+  "id": "vev_e869b9ee3d15ff49",
+  "kind": "finding.asserted",
+  "target": {
+    "type": "finding",
+    "id": "vf_00940b13c44c9822"
+  },
+  "actor": {
+    "id": "reviewer:will-blair",
+    "type": "human"
+  },
+  "timestamp": "2026-06-02T23:37:53.332998+00:00",
+  "reason": "Candidate claim vc_qcopen000000001 imported from artifact packet cap_a1b2c3d4e5f60718",
+  "before_hash": "sha256:null",
+  "after_hash": "sha256:3f7b0daf7f252f38dba7d6774f1c6af8d0410bfadc84513267ab21ef3708017f",
+  "payload": {
+    "proposal_id": "vpr_bbf2f812da2779c8"
+  },
+  "caveats": [
+    "Recorded as an open frontier edge with a known non-tight band; no resolution is claimed.",
+    "Agent output is source material until reviewer acceptance."
+  ],
+  "signature": "00ee88f73b235c251a9c8ddd3d2bb0cd799413a56173be34a871aa45c3a8df85320557cc604d7769dacbd36b9edf0ad8e7b52919ec65c6b04ae52d23555a0e0d"
+}

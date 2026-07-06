@@ -1,0 +1,132 @@
+{
+  "schema": "vela.proposal.v0.1",
+  "id": "vpr_7313028c1077b829",
+  "kind": "finding.add",
+  "target": {
+    "type": "finding",
+    "id": "vf_916a76afc89cce11"
+  },
+  "actor": {
+    "id": "agent:stabilizer-code-verifier",
+    "type": "agent"
+  },
+  "created_at": "2026-06-02T23:37:42.452786+00:00",
+  "reason": "Candidate claim vc_qc4220000000001 imported from artifact packet cap_a1b2c3d4e5f60718",
+  "payload": {
+    "artifact_packet": {
+      "created_at": "2026-06-02T23:40:00.000000+00:00",
+      "packet_id": "cap_a1b2c3d4e5f60718",
+      "producer": {
+        "id": "adapter:stabilizer-code-verifier",
+        "kind": "source_adapter",
+        "name": "Stabilizer code frozen verifier"
+      },
+      "schema": "carina.artifact_packet.v0.1",
+      "topic": "Certified [[n,k,d]] parameters of small stabilizer quantum codes"
+    },
+    "candidate_claim_id": "vc_qc4220000000001",
+    "evidence_artifact_ids": [
+      "va_qcverify00000001"
+    ],
+    "finding": {
+      "assertion": {
+        "direction": null,
+        "relation": null,
+        "text": "The [[4,2,2]] code with stabilizers XXXX, ZZZZ encodes 2 logical qubits in 4 physical qubits with distance 2, verified by exact recomputation of k and d.",
+        "type": "computational"
+      },
+      "conditions": {
+        "duration": null,
+        "text": "family:detection_code; n:4; k:2; d:2; verifier:frozen_pauli_enumeration"
+      },
+      "confidence": {
+        "basis": "agent-imported candidate claim; reviewer acceptance required",
+        "extraction_confidence": 0.7,
+        "kind": "frontier_epistemic",
+        "method": "expert_judgment",
+        "score": 0.97
+      },
+      "created": "2026-06-02T23:40:00.000000+00:00",
+      "evidence": {
+        "evidence_spans": [
+          {
+            "artifact_id": "va_qcverify00000001",
+            "artifact_packet_id": "cap_a1b2c3d4e5f60718",
+            "candidate_claim_id": "vc_qc4220000000001"
+          }
+        ],
+        "method": "ScienceClaw-shaped artifact packet import",
+        "model_system": "agent artifact packet",
+        "replicated": false,
+        "replication_count": null,
+        "type": "computational"
+      },
+      "flags": {
+        "contested": false,
+        "declining": false,
+        "gap": false,
+        "gravity_well": false,
+        "negative_space": false,
+        "retracted": false
+      },
+      "id": "vf_916a76afc89cce11",
+      "links": [],
+      "previous_version": null,
+      "provenance": {
+        "authors": [
+          {
+            "name": "Stabilizer code frozen verifier",
+            "orcid": null
+          }
+        ],
+        "doi": null,
+        "extraction": {
+          "extracted_at": "2026-06-02T23:40:00.000000+00:00",
+          "extractor_version": "vela/0.691.0",
+          "method": "artifact_to_state_import",
+          "model": "adapter:stabilizer-code-verifier",
+          "model_version": null
+        },
+        "publisher": "artifact packet",
+        "review": {
+          "corrections": [],
+          "reviewed": false,
+          "reviewed_at": null,
+          "reviewer": null
+        },
+        "source_type": "model_output",
+        "title": "cap_a1b2c3d4e5f60718 · vc_qc4220000000001",
+        "url": "Gottesman 1997",
+        "year": null
+      },
+      "updated": null,
+      "version": 1
+    }
+  },
+  "source_refs": [
+    "Gottesman 1997",
+    "artifact_packet:cap_a1b2c3d4e5f60718",
+    "packet_artifact:va_qcverify00000001",
+    "projects/quantum-codes/.vela/workspaces/vtask_a1b2c3d4e5f60718/verify.py"
+  ],
+  "status": "applied",
+  "reviewed_by": "reviewer:will-blair",
+  "reviewed_at": "2026-06-02T23:37:53.259301+00:00",
+  "decision_reason": "Verified stabilizer-code certificate accepted under reviewer authority (frozen verifier exit 0).",
+  "applied_event_id": "vev_fbc04f3dbd336936",
+  "caveats": [
+    "Parameters recomputed by a frozen brute-force verifier over the full Pauli group; exit 0.",
+    "Agent output is source material until reviewer acceptance."
+  ],
+  "agent_run": {
+    "agent": "adapter:stabilizer-code-verifier",
+    "model": "external-artifact-runtime",
+    "run_id": "cap_a1b2c3d4e5f60718",
+    "started_at": "2026-06-02T23:40:00.000000+00:00",
+    "context": {
+      "artifact_packet_id": "cap_a1b2c3d4e5f60718",
+      "producer_name": "Stabilizer code frozen verifier",
+      "topic": "Certified [[n,k,d]] parameters of small stabilizer quantum codes"
+    }
+  }
+}

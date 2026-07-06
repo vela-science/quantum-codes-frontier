@@ -1,0 +1,25 @@
+{
+  "schema": "vela.event.v0.1",
+  "id": "vev_677e741ec03bc102",
+  "kind": "finding.asserted",
+  "target": {
+    "type": "finding",
+    "id": "vf_f682d49c4214bdbc"
+  },
+  "actor": {
+    "id": "reviewer:will-blair",
+    "type": "human"
+  },
+  "timestamp": "2026-06-02T23:37:53.315230+00:00",
+  "reason": "Candidate claim vc_qc9130000000001 imported from artifact packet cap_a1b2c3d4e5f60718",
+  "before_hash": "sha256:null",
+  "after_hash": "sha256:ef45339f1e88d1962648eb156132442a56e8903ae0d6d04a7c1b3d79ab54f1c3",
+  "payload": {
+    "proposal_id": "vpr_48bd2c2afdb23008"
+  },
+  "caveats": [
+    "Parameters recomputed by the frozen verifier; exit 0.",
+    "Agent output is source material until reviewer acceptance."
+  ],
+  "signature": "ed833d5c821bc75d572efe2f5597c7ff898a2c1ed77b825ebcbdfcee096e56181962a0c6576c6231915c46d98c3c85eba248cacf3266d8223cab11b0c5977c05"
+}

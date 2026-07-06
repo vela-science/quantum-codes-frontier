@@ -1,0 +1,131 @@
+{
+  "schema": "vela.proposal.v0.1",
+  "id": "vpr_bbf2f812da2779c8",
+  "kind": "finding.add",
+  "target": {
+    "type": "finding",
+    "id": "vf_00940b13c44c9822"
+  },
+  "actor": {
+    "id": "agent:stabilizer-code-verifier",
+    "type": "agent"
+  },
+  "created_at": "2026-06-02T23:37:42.472939+00:00",
+  "reason": "Candidate claim vc_qcopen000000001 imported from artifact packet cap_a1b2c3d4e5f60718",
+  "payload": {
+    "artifact_packet": {
+      "created_at": "2026-06-02T23:40:00.000000+00:00",
+      "packet_id": "cap_a1b2c3d4e5f60718",
+      "producer": {
+        "id": "adapter:stabilizer-code-verifier",
+        "kind": "source_adapter",
+        "name": "Stabilizer code frozen verifier"
+      },
+      "schema": "carina.artifact_packet.v0.1",
+      "topic": "Certified [[n,k,d]] parameters of small stabilizer quantum codes"
+    },
+    "candidate_claim_id": "vc_qcopen000000001",
+    "evidence_artifact_ids": [
+      "va_qcverify00000001"
+    ],
+    "finding": {
+      "assertion": {
+        "direction": null,
+        "relation": null,
+        "text": "The largest distance of a single-logical-qubit stabilizer code at length 10, [[10,1,d]], is open within the band d in [3,4]; whether a [[10,1,4]] stabilizer code exists is undetermined here.",
+        "type": "open_question"
+      },
+      "conditions": {
+        "duration": null,
+        "text": "family:single_logical_qubit; n:10; k:1; d_band:3-4; status:open"
+      },
+      "confidence": {
+        "basis": "agent-imported candidate claim; reviewer acceptance required",
+        "extraction_confidence": 0.7,
+        "kind": "frontier_epistemic",
+        "method": "expert_judgment",
+        "score": 0.5
+      },
+      "created": "2026-06-02T23:40:00.000000+00:00",
+      "evidence": {
+        "evidence_spans": [
+          {
+            "artifact_id": "va_qcverify00000001",
+            "artifact_packet_id": "cap_a1b2c3d4e5f60718",
+            "candidate_claim_id": "vc_qcopen000000001"
+          }
+        ],
+        "method": "ScienceClaw-shaped artifact packet import",
+        "model_system": "agent artifact packet",
+        "replicated": false,
+        "replication_count": null,
+        "type": "computational"
+      },
+      "flags": {
+        "contested": false,
+        "declining": false,
+        "gap": false,
+        "gravity_well": false,
+        "negative_space": false,
+        "retracted": false
+      },
+      "id": "vf_00940b13c44c9822",
+      "links": [],
+      "previous_version": null,
+      "provenance": {
+        "authors": [
+          {
+            "name": "Stabilizer code frozen verifier",
+            "orcid": null
+          }
+        ],
+        "doi": null,
+        "extraction": {
+          "extracted_at": "2026-06-02T23:40:00.000000+00:00",
+          "extractor_version": "vela/0.691.0",
+          "method": "artifact_to_state_import",
+          "model": "adapter:stabilizer-code-verifier",
+          "model_version": null
+        },
+        "publisher": "artifact packet",
+        "review": {
+          "corrections": [],
+          "reviewed": false,
+          "reviewed_at": null,
+          "reviewer": null
+        },
+        "source_type": "model_output",
+        "title": "cap_a1b2c3d4e5f60718 · vc_qcopen000000001",
+        "url": "codetables.de (Grassl)",
+        "year": null
+      },
+      "updated": null,
+      "version": 1
+    }
+  },
+  "source_refs": [
+    "artifact_packet:cap_a1b2c3d4e5f60718",
+    "codetables.de (Grassl)",
+    "packet_artifact:va_qcverify00000001"
+  ],
+  "status": "applied",
+  "reviewed_by": "reviewer:will-blair",
+  "reviewed_at": "2026-06-02T23:37:53.332943+00:00",
+  "decision_reason": "Verified stabilizer-code certificate accepted under reviewer authority (frozen verifier exit 0).",
+  "applied_event_id": "vev_e869b9ee3d15ff49",
+  "caveats": [
+    "Recorded as an open frontier edge with a known non-tight band; no resolution is claimed.",
+    "Agent output is source material until reviewer acceptance."
+  ],
+  "agent_run": {
+    "agent": "adapter:stabilizer-code-verifier",
+    "model": "external-artifact-runtime",
+    "run_id": "cap_a1b2c3d4e5f60718",
+    "started_at": "2026-06-02T23:40:00.000000+00:00",
+    "context": {
+      "artifact_packet_id": "cap_a1b2c3d4e5f60718",
+      "producer_name": "Stabilizer code frozen verifier",
+      "topic": "Certified [[n,k,d]] parameters of small stabilizer quantum codes"
+    }
+  }
+}

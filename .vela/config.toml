@@ -1,0 +1,7 @@
+[project]
+name = "Quantum codes: stabilizer [[n,k,d]] certificates"
+frontier_id = "vfr_001f148c07eebecb"
+compiled_at = "2026-06-02T23:37:31Z"
+description = ""
+compiler = "vela/0.691.0"
+papers_processed = 0
