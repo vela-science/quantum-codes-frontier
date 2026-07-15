@@ -1,15 +1,15 @@
 name: Verify the signed frontier
 
-# On every change to the signed frontier, constellate-science/vela re-derives it
-# from a clean checkout and proves the working tree IS the signed state (replay +
-# signatures + hash parity). A witness-bearing frontier also re-runs every frozen
-# verifier on every stored witness. It NEVER signs and NEVER merges.
+# The git-native gate: every main push and every pull request runs the shared
+# vela-check action. This is deliberately unfiltered: public canonical roots
+# evolve, and a stale path allowlist would let scientific state bypass the gate.
+# The action re-derives the frontier from a clean checkout and proves the
+# working tree IS the signed state (replay + strict check + hash parity).
+# It NEVER signs: acceptance stays a human-keyed event in the repo.
 on:
   push:
     branches: [main]
-    paths: [".vela/**", "frontier.json", "frontier.yaml", "vela.lock", "proof/**", "witnesses/**", ".github/workflows/vela-frontier.yml"]
-  pull_request:
-    paths: [".vela/**", "frontier.json", "frontier.yaml", "vela.lock", "proof/**", "witnesses/**"]
+  pull_request: {}
   workflow_dispatch: {}
 
 permissions:
@@ -19,16 +19,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: constellate-science/vela@main
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+      - uses: vela-science/vela@v0.800.5
         with:
-          strict: "false"
-      - name: Re-derive and prove the working tree is the signed state
-        run: vela check . --strict
-      - name: Reproduce every stored witness from scratch
-        run: |
-          if ls witnesses/*.witness.json >/dev/null 2>&1; then
-            vela reproduce .
-          else
-            echo "no witnesses — this frontier verifies by check --strict (replay + signatures + hash parity)"
-          fi
+          vela-version: v0.800.5
