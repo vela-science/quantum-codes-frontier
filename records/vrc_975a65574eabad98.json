@@ -1,0 +1,63 @@
+{
+  "schema": "vela.activity-record.v0.1",
+  "id": "vrc_975a65574eabad98",
+  "frontier_id": "vfr_001f148c07eebecb",
+  "against_head": "7a8d06e9c86b9437fffaa6dac9803827f9ad64ee32c34fb1603af8ca986a17ab",
+  "assertion": "Constructed an explicit nine-generator stabilizer witness for quantum:[[10,1,4]] and verified locally that the generators are distinct, non-identity, pairwise symplectically commuting, GF(2)-independent of rank nine, and that all 3,675 Pauli errors of weights one through three are either detected or lie in the stabilizer span.",
+  "assertion_type": "computational",
+  "artifacts": [
+    {
+      "kind": "application/json",
+      "locator": "records/artifacts/sha256/f23ac24e932de13538ac842bc2a467648aa82628577cffff6c71411e59a06a3c",
+      "sha256": "f23ac24e932de13538ac842bc2a467648aa82628577cffff6c71411e59a06a3c",
+      "size_bytes": 295,
+      "media_type": "application/octet-stream",
+      "disclosure": "public",
+      "locator_integrity": "immutable",
+      "availability": "available",
+      "note": "copied from Receipt v1 artifact 0"
+    },
+    {
+      "kind": "engine-manifest",
+      "locator": "records/artifacts/sha256/7269dca82f82882db0cbe78ff50a5a26bd8d9ad0534ce0c83563a4468de2a68f",
+      "sha256": "7269dca82f82882db0cbe78ff50a5a26bd8d9ad0534ce0c83563a4468de2a68f",
+      "size_bytes": 777,
+      "media_type": "application/octet-stream",
+      "disclosure": "public",
+      "locator_integrity": "immutable",
+      "availability": "available",
+      "note": "copied from Receipt v1 artifact 1"
+    },
+    {
+      "kind": "verifier-manifest",
+      "locator": "records/artifacts/sha256/b46d844261e91ed21767335644f5eb086c7f49a7aa537a1722053fe3458a3fd7",
+      "sha256": "b46d844261e91ed21767335644f5eb086c7f49a7aa537a1722053fe3458a3fd7",
+      "size_bytes": 421,
+      "media_type": "application/octet-stream",
+      "disclosure": "public",
+      "locator_integrity": "immutable",
+      "availability": "available",
+      "note": "copied from Receipt v1 artifact 2"
+    }
+  ],
+  "caveats": [
+    "The frozen external verifier was not invoked in this workspace.",
+    "Declared verifier outcome: passed.",
+    "Canopus produced this record; it is not a human acceptance decision."
+  ],
+  "receipt_digest": "sha256:7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f",
+  "receipt_path": "records/receipts/sha256/7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f.json",
+  "operation_id": "vop_a1e1802c5e0fc0af7e3e6713ed0ce51d06e9ae893b0dd9e678b1fe414f8f3dce",
+  "lineage": {
+    "parents": [],
+    "derived_from": [],
+    "source_refs": [],
+    "supersedes": [],
+    "producer_run_id": null,
+    "frontier": null
+  },
+  "emitted_by": "agent:canopus-local",
+  "emitted_at": "2026-07-18T19:27:14.787731+00:00",
+  "signature": "acb1aad01e69f80a52e01274ae36d07e42e09cf33899668e63c459d8ba4b44d654fae580c3119c970005c7858d5ac8a4f6db931165b918e33272a20ed22e7d04",
+  "signer_pubkey_hex": "3130780d678c158df83ece123089f3a4c827fe87e489b141ed6dba674831cf92"
+}

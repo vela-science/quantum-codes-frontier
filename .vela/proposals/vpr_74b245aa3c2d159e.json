@@ -1,0 +1,126 @@
+{
+  "schema": "vela.proposal.v0.1",
+  "id": "vpr_74b245aa3c2d159e",
+  "kind": "finding.add",
+  "target": {
+    "type": "finding",
+    "id": "vf_6cf2b5098503e0a2"
+  },
+  "actor": {
+    "id": "agent:canopus-local",
+    "type": "agent"
+  },
+  "created_at": "2026-07-18T19:27:14.787731+00:00",
+  "reason": "Manual finding added to frontier state",
+  "payload": {
+    "finding": {
+      "assertion": {
+        "direction": null,
+        "relation": null,
+        "text": "Constructed an explicit nine-generator stabilizer witness for quantum:[[10,1,4]] and verified locally that the generators are distinct, non-identity, pairwise symplectically commuting, GF(2)-independent of rank nine, and that all 3,675 Pauli errors of weights one through three are either detected or lie in the stabilizer span.",
+        "type": "computational"
+      },
+      "conditions": {
+        "duration": null,
+        "text": "Record vrc_975a65574eabad98 (signed; recorded against the current head). Receipt: sha256:7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f. Caveats: The frozen external verifier was not invoked in this workspace. | Declared verifier outcome: passed. | Canopus produced this record; it is not a human acceptance decision.. Artifacts: 3 hash-verified at propose."
+      },
+      "confidence": {
+        "basis": "operator-supplied frontier prior; review required",
+        "extraction_confidence": 1.0,
+        "kind": "frontier_epistemic",
+        "method": "expert_judgment",
+        "score": 0.3
+      },
+      "created": "2026-07-18T19:27:14.789799+00:00",
+      "evidence": {
+        "evidence_spans": [
+          {
+            "artifact_kind": "application/json",
+            "artifact_locator": "records/artifacts/sha256/f23ac24e932de13538ac842bc2a467648aa82628577cffff6c71411e59a06a3c",
+            "artifact_sha256": "f23ac24e932de13538ac842bc2a467648aa82628577cffff6c71411e59a06a3c",
+            "section": "artifacts[0]",
+            "source": "records/receipts/sha256/7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f.json",
+            "text": "Constructed an explicit nine-generator stabilizer witness for quantum:[[10,1,4]] and verified locally that the generators are distinct, non-identity, pairwise symplectically commuting, GF(2)-independent of rank nine, and that all 3,675 Pauli errors of weights one through three are either detected or lie in the stabilizer span."
+          },
+          {
+            "artifact_kind": "engine-manifest",
+            "artifact_locator": "records/artifacts/sha256/7269dca82f82882db0cbe78ff50a5a26bd8d9ad0534ce0c83563a4468de2a68f",
+            "artifact_sha256": "7269dca82f82882db0cbe78ff50a5a26bd8d9ad0534ce0c83563a4468de2a68f",
+            "section": "artifacts[1]",
+            "source": "records/receipts/sha256/7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f.json",
+            "text": "Constructed an explicit nine-generator stabilizer witness for quantum:[[10,1,4]] and verified locally that the generators are distinct, non-identity, pairwise symplectically commuting, GF(2)-independent of rank nine, and that all 3,675 Pauli errors of weights one through three are either detected or lie in the stabilizer span."
+          },
+          {
+            "artifact_kind": "verifier-manifest",
+            "artifact_locator": "records/artifacts/sha256/b46d844261e91ed21767335644f5eb086c7f49a7aa537a1722053fe3458a3fd7",
+            "artifact_sha256": "b46d844261e91ed21767335644f5eb086c7f49a7aa537a1722053fe3458a3fd7",
+            "section": "artifacts[2]",
+            "source": "records/receipts/sha256/7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f.json",
+            "text": "Constructed an explicit nine-generator stabilizer witness for quantum:[[10,1,4]] and verified locally that the generators are distinct, non-identity, pairwise symplectically commuting, GF(2)-independent of rank nine, and that all 3,675 Pauli errors of weights one through three are either detected or lie in the stabilizer span."
+          }
+        ],
+        "method": "manual state transition",
+        "model_system": "",
+        "replicated": false,
+        "replication_count": null,
+        "type": "computational"
+      },
+      "flags": {
+        "contested": false,
+        "declining": false,
+        "gap": false,
+        "gravity_well": false,
+        "negative_space": false,
+        "retracted": false
+      },
+      "id": "vf_6cf2b5098503e0a2",
+      "links": [],
+      "previous_version": null,
+      "provenance": {
+        "authors": [
+          {
+            "name": "agent:canopus-local",
+            "orcid": null
+          }
+        ],
+        "doi": null,
+        "extraction": {
+          "extracted_at": "2026-07-18T19:27:14.787731+00:00",
+          "extractor_version": "vela/0.901.0",
+          "method": "manual_curation",
+          "model": null,
+          "model_version": null
+        },
+        "review": {
+          "corrections": [],
+          "reviewed": false,
+          "reviewed_at": null,
+          "reviewer": null
+        },
+        "source_type": "model_output",
+        "title": "record:vrc_975a65574eabad98",
+        "year": null
+      },
+      "updated": null,
+      "version": 1
+    },
+    "vela_submission": {
+      "operation_id": "vop_a1e1802c5e0fc0af7e3e6713ed0ce51d06e9ae893b0dd9e678b1fe414f8f3dce",
+      "receipt_path": "records/receipts/sha256/7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f.json",
+      "receipt_root": "sha256:7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f",
+      "record_id": "vrc_975a65574eabad98",
+      "review_material_path": "records/review/sha256/7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f.json",
+      "schema": "vela.submission-links.internal.v1"
+    }
+  },
+  "source_refs": [
+    "record:vrc_975a65574eabad98",
+    "records/receipts/sha256/7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f.json",
+    "records/review/sha256/7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f.json",
+    "sha256:7f600b655a2bb6ca8ce14eaed2f5c412cf70f13f7b40e390cb690ddb4ebb8e2f"
+  ],
+  "status": "pending_review",
+  "caveats": [
+    "Manual findings require evidence review before scientific use."
+  ]
+}

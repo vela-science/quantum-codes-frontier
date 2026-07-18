@@ -2,7 +2,7 @@
   "event_count": 7,
   "event_log_hash": "sha256:7a8d06e9c86b9437fffaa6dac9803827f9ad64ee32c34fb1603af8ca986a17ab",
   "freshness": "fresh",
-  "frontier_hash": "sha256:b13450fd9349903f3b1c166f17a0a38194fc8d20401743979435051e016c64ab",
+  "frontier_hash": "sha256:0975b1b7fda4c2fee1b5cf6fe312843f3f36425151da75eab389522ee1a73e10",
   "frontier_id": "vfr_001f148c07eebecb",
   "materialized_at": "2026-07-18T19:23:17.873191+00:00",
   "paths": {
@@ -12,7 +12,7 @@
     "lockfile": "vela.lock",
     "replay_trace": "proof/replay.trace.jsonl"
   },
-  "proposal_state_hash": "sha256:8a3a5d4473868aa257f094e20a2dc36777385938cde184c25fc8d8d372e01501",
+  "proposal_state_hash": "sha256:cdc0f3c3637294d70250b956867d9188df193909a104fa80bde8685e8d1e8ec0",
   "reducer": {
     "digest": "sha256:5ed141c9e5336693a450eedec9ebe43855a3379dea5d7b654fdba4d1d33081bc",
     "name": "vela",
