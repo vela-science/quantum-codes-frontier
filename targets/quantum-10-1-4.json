@@ -1,0 +1,37 @@
+{
+  "schema": "quantum-codes.stabilizer-work.v1",
+  "target": "quantum:[[10,1,4]]",
+  "objective": "Produce an explicit ten-qubit stabilizer generator set encoding one logical qubit with distance at least four.",
+  "witness_contract": {
+    "schema": "canopus.quantum-stabilizer-witness.v1",
+    "fields": {
+      "target": "quantum:[[10,1,4]]",
+      "n": 10,
+      "k": 1,
+      "generators": "Exactly nine distinct length-10 strings over I, X, Y, Z."
+    }
+  },
+  "verification": {
+    "generator_validity": "Every generator is a non-identity ten-qubit Pauli string.",
+    "commutation": "Every generator pair has zero binary symplectic product.",
+    "encoded_dimension": "The generator matrix has GF(2) rank nine, so k = 10 - 9 = 1.",
+    "distance_threshold": "Every Pauli of weight one, two, or three either anticommutes with a generator or belongs to the stabilizer row span."
+  },
+  "bounded_negative_contract": {
+    "allowed": true,
+    "required_fields": [
+      "algorithm",
+      "complete_search_space",
+      "symmetry_reductions",
+      "candidate_count",
+      "checkpoint_roots",
+      "replay_command"
+    ],
+    "claim_limit": "A negative artifact describes only the exact enumerated search space unless completeness over all stabilizer codes is proved."
+  },
+  "authority": {
+    "producer_ceiling": "receipt_only",
+    "verifier_success": "mechanical evidence, not scientific acceptance",
+    "landing_ceiling": "defer"
+  }
+}

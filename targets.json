@@ -1,0 +1,30 @@
+{
+  "schema": "vela.target-index.v1",
+  "frontier_id": "vfr_001f148c07eebecb",
+  "as_of": {
+    "snapshot_hash": "sha256:c3cebec776ccc4af0dd3f4edd8db8ac340df546c61e32d8c9d2ab4f7c92c92cb",
+    "event_log_hash": "sha256:44a9a313cdf6c78e127e36ecf52250b9e0e657220f4b148c3331dd59db1f3769",
+    "proposal_state_hash": "sha256:8a3a5d4473868aa257f094e20a2dc36777385938cde184c25fc8d8d372e01501"
+  },
+  "claim_boundary": {
+    "derived": true,
+    "authoritative": false,
+    "deletable": true
+  },
+  "targets": [
+    {
+      "id": "quantum:[[10,1,4]]",
+      "title": "Construct a ten-qubit single-logical stabilizer code with distance at least four",
+      "why": "The accepted frontier records this parameter band as open and has no explicit [[10,1,d>=4]] stabilizer witness.",
+      "state": "open",
+      "rank": 1,
+      "objective": "Produce one explicit stabilizer witness or one fully specified bounded negative-search artifact.",
+      "labels": ["quantum-code", "stabilizer", "bounded-search", "upstream-open"],
+      "packet": {
+        "path": "targets/quantum-10-1-4.json",
+        "sha256": "sha256:344944054d2f78a9e680ad099985485dd2f80b3558fe62c01c95229eceb43f6c",
+        "schema": "quantum-codes.stabilizer-work.v1"
+      }
+    }
+  ]
+}
