@@ -1,24 +1,28 @@
 {
-  "event_count": 7,
-  "event_log_hash": "sha256:7a8d06e9c86b9437fffaa6dac9803827f9ad64ee32c34fb1603af8ca986a17ab",
-  "freshness": "fresh",
-  "frontier_hash": "sha256:0975b1b7fda4c2fee1b5cf6fe312843f3f36425151da75eab389522ee1a73e10",
+  "schema": "vela.frontier_repo_proof.v1",
   "frontier_id": "vfr_001f148c07eebecb",
-  "materialized_at": "2026-07-18T19:23:17.873191+00:00",
+  "profile_root": "sha256:74571bf8bbdddf0aea73d621ab80df7e04fa465b05f548ea4f1cf2c3d9aabde1",
+  "identity_root": "sha256:64c61dd768e00d9d83b38a0f4364cba8717fde1fd46ab4685cc1cbe127b9d631",
+  "dependency_root": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "scientific_state_root": "sha256:1658e911d872da62111181de94e620c81605f24b4a320a0db8f726cee863a9e6",
+  "legacy_snapshot_root": "sha256:0975b1b7fda4c2fee1b5cf6fe312843f3f36425151da75eab389522ee1a73e10",
+  "event_log_root": "sha256:0da1444c129ef93e18e0c649c9e81ff639efb87981cd6185b0186333708dd795",
+  "proposal_root": "sha256:cdc0f3c3637294d70250b956867d9188df193909a104fa80bde8685e8d1e8ec0",
+  "reducer": {
+    "name": "vela",
+    "version": "0.930.0-rc.7",
+    "package": "vela@0.930.0-rc.7",
+    "digest": "sha256:360246df4ad38aa46a6d9ee155724fd72f806de039316c5c1fdb380f4481d20b"
+  },
+  "materialized_at": "2026-07-25T22:18:02Z",
+  "freshness": "fresh",
+  "event_count": 8,
   "paths": {
-    "events_authority": ".vela/events/",
-    "events_manifest": "proof/events.manifest.jsonl",
     "frontier": "frontier.json",
     "lockfile": "vela.lock",
+    "events_authority": ".vela/events/",
+    "events_manifest": "proof/events.manifest.jsonl",
     "replay_trace": "proof/replay.trace.jsonl"
   },
-  "proposal_state_hash": "sha256:cdc0f3c3637294d70250b956867d9188df193909a104fa80bde8685e8d1e8ec0",
-  "reducer": {
-    "digest": "sha256:5ed141c9e5336693a450eedec9ebe43855a3379dea5d7b654fdba4d1d33081bc",
-    "name": "vela",
-    "package": "vela@0.901.0",
-    "version": "0.901.0"
-  },
-  "schema": "vela.frontier_repo_proof.v0.1",
-  "warning": "Do not edit frontier.json directly. Use Vela's task-first receipt, signing, materialization, and proof commands."
+  "warning": "Generated integrity evidence. Scientific acceptance remains event-derived."
 }
