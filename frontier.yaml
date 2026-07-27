@@ -1,16 +1,16 @@
-schema: vela.frontier-profile.v1
+schema: vela.frontier-profile.v2
 frontier_id: vfr_001f148c07eebecb
-name: "Quantum codes: stabilizer [[n,k,d]] certificates"
+name: 'Quantum codes: stabilizer [[n,k,d]] certificates'
 summary: Explicit stabilizer-code witnesses, exact parameter claims, and bounded searches for quantum error-correcting codes.
 scope:
   question: Which explicit stabilizer constructions establish reproducible quantum-code parameters?
   includes:
-    - Explicit stabilizer generators, exact encoded dimension and distance checks, verifier evidence, and bounded search artifacts.
+  - Explicit stabilizer generators, exact encoded dimension and distance checks, verifier evidence, and bounded search artifacts.
   excludes:
-    - Universal nonexistence or optimality claims from incomplete bounded searches.
-    - Verifier success as scientific acceptance.
+  - Universal nonexistence or optimality claims from incomplete bounded searches.
+  - Verifier success as scientific acceptance.
 maintainers:
-  - williamjblair
+- williamjblair
 license:
   content: CC-BY-4.0
   code: Apache-2.0
