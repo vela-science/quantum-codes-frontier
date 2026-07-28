@@ -10,22 +10,17 @@ Generated from VELA.md. Edit VELA.md and run `vela agents sync`; do not edit her
 
 Agents may:
 
-- inspect state: `vela status .`, `vela next .`, `vela check .`
-- claim one target: `vela work <target> --as agent:<name> --json`
-- land Receipt v1 work through that session: `vela land --work <target>
-  --claim … --artifact … --caveat … --as agent:<name> --json`
-- import a foreign producer's canonical Receipt v1: `vela land receipt.json
-  --as agent:<name> --json`
-- run `vela check . --strict`, and run `vela reproduce .` when the frontier
-  contains frozen-verifier witnesses
-- rebuild derived views: `vela frontier materialize .`
+- inspect state and exact objects with `status`, `next`, `show`, `why`, and
+  `check --strict`
+- start one offered Target when a current Target Index exists
+- run the exact verifier named by that Target
+- register one signed, bounded Submission from the active Attempt
 
 Agents may not:
 
-- run `vela sign`, accept, reject, apply, or finalize a truth-bearing proposal
-- sign with, read, or handle a human's key
-- hand-edit accepted events or derived views such as `frontier.json` and proof
-  packets
+- invoke repository-authority decisions or use authority credentials
+- treat verifier success, Git publication, or a model answer as acceptance
+- hand-edit `.vela/authority/`, `.vela/repository.json`, or retained records
 
 Use `vela status --json` before proposing changes. Every proposed transition is a
 draft until a key-holding human accepts it. The full charter is VELA.md.

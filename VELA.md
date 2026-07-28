@@ -1,43 +1,41 @@
-# Quantum codes: stabilizer [[n,k,d]] certificates — agent charter
+# Quantum codes frontier — agent charter
 
-This frontier is driven by `vela` + `git`. The ordinary path is
-`next -> work -> land -> sign`: agents stop after the routed landing; only a
-human key or a previously human-signed Permit policy changes accepted state.
-`vela agents sync` regenerates CLAUDE.md / AGENTS.md / editor adapters from
-this file — edit here, never there.
+This is a current Vela repository. `.vela/epoch.json` binds its signed
+predecessor, `.vela/repository.json` indexes current objects,
+`.vela/authority/` holds repository authority, and `records/` contains
+content-addressed scientific records. `vela agents sync` regenerates tool
+adapters from this file.
 
 ## Agent rules
 
 Agents may:
 
-- inspect state: `vela status .`, `vela next .`, `vela check .`
-- claim one target: `vela work <target> --as agent:<name> --json`
-- land Receipt v1 work through that session: `vela land --work <target>
-  --claim … --artifact … --caveat … --as agent:<name> --json`
-- import a foreign producer's canonical Receipt v1: `vela land receipt.json
-  --as agent:<name> --json`
-- run `vela check . --strict`, and run `vela reproduce .` when the frontier
-  contains frozen-verifier witnesses
-- rebuild derived views: `vela frontier materialize .`
+- inspect state and exact objects with `status`, `next`, `show`, `why`, and
+  `check --strict`
+- start one offered Target when a current Target Index exists
+- run the exact verifier named by that Target
+- register one signed, bounded Submission from the active Attempt
 
 Agents may not:
 
-- run `vela sign`, accept, reject, apply, or finalize a truth-bearing proposal
-- sign with, read, or handle a human's key
-- hand-edit accepted events or derived views such as `frontier.json` and proof
-  packets
+- invoke repository-authority decisions or use authority credentials
+- treat verifier success, Git publication, or a model answer as acceptance
+- hand-edit `.vela/authority/`, `.vela/repository.json`, or retained records
 
 ## Fast commands
 
 ```bash
-vela next . --json                              # ranked offer
-vela work <target> --as agent:<name> --json     # lease + briefing
-vela land --work <target> --claim <claim> \
+vela status . --json
+vela next . --json
+vela start <target> --as agent:<name> --json
+vela submit --frontier . --attempt <vat_id> --claim "<bounded result>" \
   --type computational --replayability exact \
-  --artifact <path>:<kind> --caveat <limit> \
-  --as agent:<name> --json                       # Receipt v1 + policy route
-vela status . --json                             # accepted and pending state
-vela check . --strict                            # replay and parity gate
-vela frontier materialize .                      # rebuild derived views
-git push                                         # publication; no authority
+  --artifact <path>:<kind> --caveat "<scope limit>" \
+  --as agent:<name> --json
+vela show . <object_id> --json
+vela why . <claim_id> --json
+vela check . --strict --json
 ```
+
+No current Target Index is configured. If `vela next` returns no offers,
+inspect existing records and stop.
