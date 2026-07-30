@@ -6,11 +6,8 @@ evidence. `.vela/epoch.json` binds the signed predecessor,
 repository authority, and `records/` contains content-addressed scientific
 records. Git publishes bytes; it does not grant scientific authority.
 
-The current epoch publishes one derived, non-authoritative Target Index offer:
-`quantum:[[10,1,4]]`. Its packet binds the accepted open-question Claim, the
-exact retained witness, and a source-visible verifier. The producer ceiling is
-`pending_review`; neither the Target nor a passing verifier can change
-Standing:
+The current epoch has no configured Target Index, so `vela next` returns no
+offers rather than silently reviving a retired queue:
 
 ```bash
 vela status . --json
@@ -18,7 +15,12 @@ vela next . --json
 vela check . --strict --json
 ```
 
-The predecessor remains available at `pre-current-epoch/b1f5488187a7`.
+The predecessor remains available at `pre-current-epoch/b1f5488187a7`. The
+retained witness is already complete, so registering its result does not need a
+retroactive Target or Attempt. Vela's exact supersession path can propose a
+replacement for the accepted open-question Claim by binding its full Claim ID
+and root. That Submission remains `pending_review` until a separate scoped
+Verification and authorized human Decision.
 
 The retained quantum witness has a source-visible independent reconstruction:
 

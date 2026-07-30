@@ -15,6 +15,9 @@ Agents may:
 - start one offered Target when a current Target Index exists
 - run the exact verifier named by that Target
 - register one signed, bounded Submission from the active Attempt
+- propose an exact correction or supersession of one accepted Claim without
+  inventing a Target or Attempt, provided the Submission binds the full
+  predecessor Claim ID and root
 
 Agents may not:
 
