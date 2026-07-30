@@ -1,37 +1,62 @@
 {
-  "schema": "quantum-codes.stabilizer-work.v1",
-  "target": "quantum:[[10,1,4]]",
-  "objective": "Produce an explicit ten-qubit stabilizer generator set encoding one logical qubit with distance at least four.",
-  "witness_contract": {
-    "schema": "canopus.quantum-stabilizer-witness.v1",
-    "fields": {
-      "target": "quantum:[[10,1,4]]",
-      "n": 10,
-      "k": 1,
-      "generators": "Exactly nine distinct length-10 strings over I, X, Y, Z."
+  "schema": "quantum-codes.stabilizer-admission-work.v1",
+  "frontier_id": "vfr_001f148c07eebecb",
+  "repository": {
+    "root": "sha256:22a0ef52195d713ddc68c271c5a29de51b54e9b62280103f8acb3f3bcd6b8f1b"
+  },
+  "target": {
+    "id": "quantum:[[10,1,4]]",
+    "state": "open",
+    "objective": "Produce one authenticated, bounded Submission proposing that the retained open-question Claim be superseded by the exact existence result established by the retained witness and verifier."
+  },
+  "accepted_state": {
+    "open_question": {
+      "claim_id": "vcl_da1b447d2c2a260ca9ca968066664ac2deee3f99b3d9e6e6f3fdb16a725bc1f8",
+      "claim_root": "sha256:d02a55d6acc25c4d9908363f5f9ed4194672560d9a8da348bb60e8d44486bbbf",
+      "path": "records/claims/sha256/d02a55d6acc25c4d9908363f5f9ed4194672560d9a8da348bb60e8d44486bbbf.json",
+      "standing": "accepted"
     }
   },
-  "verification": {
-    "generator_validity": "Every generator is a non-identity ten-qubit Pauli string.",
-    "commutation": "Every generator pair has zero binary symplectic product.",
-    "encoded_dimension": "The generator matrix has GF(2) rank nine, so k = 10 - 9 = 1.",
-    "distance_threshold": "Every Pauli of weight one, two, or three either anticommutes with a generator or belongs to the stabilizer row span."
+  "evidence": {
+    "witness": {
+      "schema": "canopus.quantum-stabilizer-witness.v1",
+      "path": "artifacts/quantum-10-1-4.witness.json",
+      "sha256": "sha256:f23ac24e932de13538ac842bc2a467648aa82628577cffff6c71411e59a06a3c"
+    },
+    "verifier": {
+      "path": "scripts/verify_quantum_certificate.py",
+      "sha256": "sha256:cba438b1c1e6dfafe4767ec5393573e6ae0bc387bf7995c1a423a3e50e755516",
+      "command": [
+        "python3",
+        "scripts/verify_quantum_certificate.py",
+        "artifacts/quantum-10-1-4.witness.json"
+      ],
+      "expected_report_sha256": "sha256:9a2282be31eef1784304ae58aa5dc00e1871fb1ba2d46c0047153c7d04e3fc35"
+    }
   },
-  "bounded_negative_contract": {
-    "allowed": true,
-    "required_fields": [
-      "algorithm",
-      "complete_search_space",
-      "symmetry_reductions",
-      "candidate_count",
-      "checkpoint_roots",
-      "replay_command"
-    ],
-    "claim_limit": "A negative artifact describes only the exact enumerated search space unless completeness over all stabilizer codes is proved."
+  "proposed_submission": {
+    "requested_change": {
+      "kind": "supersede_claim",
+      "target": {
+        "claim_id": "vcl_da1b447d2c2a260ca9ca968066664ac2deee3f99b3d9e6e6f3fdb16a725bc1f8",
+        "claim_root": "sha256:d02a55d6acc25c4d9908363f5f9ed4194672560d9a8da348bb60e8d44486bbbf"
+      }
+    },
+    "claim": "The nine Pauli generators in witness sha256:f23ac24e932de13538ac842bc2a467648aa82628577cffff6c71411e59a06a3c define a ten-qubit stabilizer with rank 9 and exact logical distance 4 under exhaustive binary-symplectic centralizer reconstruction; therefore an explicit [[10,1,4]] stabilizer code exists.",
+    "scope": "This establishes existence and exact parameters of this one retained stabilizer witness. It does not establish optimality at length 10, uniqueness, novelty, classification, independent-participant replication, or scientific acceptance before an authorized Decision.",
+    "verification": "Recompute witness sha256:f23ac24e932de13538ac842bc2a467648aa82628577cffff6c71411e59a06a3c with scripts/verify_quantum_certificate.py sha256:cba438b1c1e6dfafe4767ec5393573e6ae0bc387bf7995c1a423a3e50e755516; confirm nine pairwise-commuting independent generators, encoded dimension 1, a 2,048-element centralizer, 1,536 non-stabilizer logical Paulis, and exact minimum logical weight 4; and byte-match report sha256:9a2282be31eef1784304ae58aa5dc00e1871fb1ba2d46c0047153c7d04e3fc35."
+  },
+  "completion_contract": {
+    "artifact_path": "artifacts/quantum-10-1-4.witness.json",
+    "artifact_kind": "witness",
+    "artifact_sha256": "sha256:f23ac24e932de13538ac842bc2a467648aa82628577cffff6c71411e59a06a3c",
+    "replayability": "exact",
+    "requested_change": "supersede accepted open-question Claim with a pending-review existence Claim"
   },
   "authority": {
-    "producer_ceiling": "receipt_only",
-    "verifier_success": "mechanical evidence, not scientific acceptance",
-    "landing_ceiling": "defer"
+    "producer_ceiling": "pending_review",
+    "verification_ceiling": "evidence_only",
+    "accepted_standing_effect": "none",
+    "requires_human_decision": true
   }
 }

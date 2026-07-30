@@ -1,0 +1,48 @@
+{
+  "authority": "non_authoritative",
+  "checked_properties": [
+    "generator_validity",
+    "pairwise_commutation",
+    "generator_rank",
+    "encoded_dimension",
+    "complete_binary_symplectic_centralizer",
+    "exact_minimum_logical_weight"
+  ],
+  "command": {
+    "argv": [
+      "python3",
+      "scripts/verify_quantum_certificate.py",
+      "artifacts/quantum-10-1-4.witness.json"
+    ],
+    "network": "not_required",
+    "working_directory": ".",
+    "writes": "stdout_only"
+  },
+  "expected": {
+    "centralizer_dimension": 11,
+    "centralizer_size": 2048,
+    "encoded_dimension": 1,
+    "exact_distance": 4,
+    "generator_rank": 9,
+    "nonstabilizer_centralizer_size": 1536,
+    "stabilizer_size": 512,
+    "stdout_sha256": "sha256:9a2282be31eef1784304ae58aa5dc00e1871fb1ba2d46c0047153c7d04e3fc35"
+  },
+  "limitations": [
+    "This verifies only the exact retained generator set and witness bytes.",
+    "It does not classify all length-10 stabilizer codes or prove optimality.",
+    "It is mechanical evidence, not a Vela Verification Record or scientific acceptance."
+  ],
+  "schema": "quantum-codes.independent-verifier.v1",
+  "target": "quantum:[[10,1,4]]",
+  "verifier": {
+    "implementation_path": "scripts/verify_quantum_certificate.py",
+    "implementation_sha256": "sha256:cba438b1c1e6dfafe4767ec5393573e6ae0bc387bf7995c1a423a3e50e755516",
+    "runtime": "python3-standard-library",
+    "runtime_minimum": "3.11"
+  },
+  "witness": {
+    "path": "artifacts/quantum-10-1-4.witness.json",
+    "sha256": "sha256:f23ac24e932de13538ac842bc2a467648aa82628577cffff6c71411e59a06a3c"
+  }
+}
