@@ -19,7 +19,16 @@ The predecessor remains available at
 `pre-current-epoch/b1f5488187a7`. A new offer must be expressed in the current
 Target Index format before an agent may run `start -> submit`.
 
-The retained quantum witness needs a current verifier capsule before
-repository-wide `vela reproduce .` can be claimed as green. Until then, strict
-repository verification is the publication gate and no broader scientific
-claim is implied.
+The retained quantum witness has a source-visible independent reconstruction:
+
+```bash
+python3 scripts/verify_quantum_certificate.py \
+  artifacts/quantum-10-1-4.witness.json
+python3 -m unittest -v tests/test_quantum_certificate.py
+```
+
+It derives the complete binary-symplectic centralizer, enumerates all 1,536
+non-stabilizer logical Paulis, and computes exact distance four. This result is
+mechanical evidence only. It is not yet a current Vela Verification Record,
+does not change Standing, and does not make repository-wide `vela reproduce .`
+green. Strict repository verification remains the publication gate.
