@@ -34,6 +34,14 @@ It derives the complete binary-symplectic centralizer, enumerates all 1,536
 non-stabilizer logical Paulis, and computes exact distance four. This result is
 bound by the non-authoritative verifier contract at
 `verifiers/quantum-10-1-4-centralizer.v1.json`. It is mechanical evidence only.
-It is not yet a current Vela Verification Record, does not change Standing,
-and does not make repository-wide `vela reproduce .` green. Strict repository
-verification remains the publication gate.
+
+Two current Verification Records retain the scoped mathematical result and the
+exact contract replay. The replay used the retained implementation with network
+and file writes denied and reproduced the contract's required stdout digest.
+Both records disclose the same operator, machine, repository, witness, and
+implementation; they provide actor separation, not external-participant
+independence or an audit of verifier soundness.
+
+The Proposal remains pending an authorized human Decision. Neither Verification
+changed accepted Standing. Strict repository verification remains the
+publication gate.
