@@ -27,7 +27,7 @@ The retained quantum witness has a source-visible independent reconstruction:
 ```bash
 python3 scripts/verify_quantum_certificate.py \
   artifacts/quantum-10-1-4.witness.json
-python3 -m unittest -v tests/test_quantum_certificate.py
+python3 -m unittest discover -s tests -p 'test_quantum_certificate.py' -v
 ```
 
 It derives the complete binary-symplectic centralizer, enumerates all 1,536
