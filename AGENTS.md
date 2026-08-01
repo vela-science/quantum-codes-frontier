@@ -10,11 +10,11 @@ Agents may:
 
 - inspect state and exact objects with `status`, `next`, `show`, `why`, and
   `check`
-- start one offered Target when a current Target Index exists
+- inspect one offered Target with the write-free `vela start` briefing
 - run the exact verifier named by that Target
-- retain one signed, bounded Submission from the active Attempt
+- retain one signed, bounded Submission binding the exact packet and verifier
 - propose an exact correction or supersession of one accepted Claim without
-  inventing a Target or Attempt, provided the Submission binds the full
+  inventing a Target, provided the Submission binds the full
   predecessor Claim ID and root
 
 Agents may not:
@@ -28,16 +28,20 @@ Agents may not:
 ```bash
 vela status . --json
 vela next . --json
-vela start <target> --as agent:<name> --json
-vela submit --frontier . --attempt <vat_id> --claim "<bounded result>" \
+vela start <target> --frontier . --json
+vela submit --frontier . --claim "<bounded result>" \
   --type computational --replayability exact \
   --artifact <path>:<kind> --caveat "<scope limit>" \
+  --packet-root <packet_sha256> --profile-root <profile_sha256> \
+  --verifier-capsule-root <capsule_sha256> \
+  --result-contract-root <contract_sha256> \
   --as agent:<name> --json
 vela submit --frontier . --claim "<bounded replacement>" \
   --type computational --replayability exact \
   --artifact <path>:<kind> --caveat "<scope limit>" \
   --supersedes <full-vcl-id> --target-root <full-sha256-root> \
   --as agent:<name> --json
+vela verification import . <verification.json> --as verifier:<name> --json
 vela show . <object_id> --json
 vela why . <claim_id> --json
 vela check . --json

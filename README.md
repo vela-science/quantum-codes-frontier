@@ -1,7 +1,7 @@
 # Quantum codes: stabilizer `[[n,k,d]]` certificates
 
 This current Vela repository records stabilizer-code Claims and retained
-evidence. `.vela/epoch.json` binds the signed predecessor,
+evidence. `.vela/origin.json` binds the compacted predecessor,
 `.vela/repository.json` indexes current objects, `.vela/authority/` holds
 repository authority, and `records/` contains content-addressed scientific
 records. Git publishes bytes; it does not grant scientific authority.
@@ -15,7 +15,7 @@ vela next . --json
 vela check . --json
 ```
 
-The predecessor remains available at `pre-current-epoch/b1f5488187a7`. The
+The predecessor remains available at `pre-compaction/14219ad10db5`. The
 retained witness is already complete, so registering its result does not need a
 retroactive Target or Attempt. Vela's exact supersession path can propose a
 replacement for the accepted open-question Claim by binding its full Claim ID
