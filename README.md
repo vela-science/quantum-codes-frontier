@@ -12,7 +12,7 @@ offers rather than silently reviving a retired queue:
 ```bash
 vela status . --json
 vela next . --json
-vela check . --strict --json
+vela check . --json
 ```
 
 The predecessor remains available at `pre-current-epoch/b1f5488187a7`. The
