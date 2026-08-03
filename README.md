@@ -22,7 +22,8 @@ open-question Claim by full ID and root. Two scoped Verification Records passed,
 and a separate authorized human Decision accepted the bounded replacement
 Claim. Verification did not cause acceptance.
 
-The retained quantum witness has a source-visible independent reconstruction:
+The retained quantum witness has a source-visible alternate-algorithm
+reconstruction relative to the historical capsule:
 
 ```bash
 python3 scripts/verify_quantum_certificate.py \
@@ -30,9 +31,9 @@ python3 scripts/verify_quantum_certificate.py \
 python3 -m unittest discover -s tests -p 'test_quantum_certificate.py' -v
 ```
 
-It derives the complete binary-symplectic centralizer, enumerates all 1,536
-non-stabilizer logical Paulis, and computes exact distance four. This result is
-bound by the non-authoritative verifier contract at
+It derives the complete phase-free binary-symplectic centralizer, enumerates
+all 1,536 centralizer-minus-stabilizer representatives, and computes exact
+distance four. This result is bound by the non-authoritative verifier contract at
 `verifiers/quantum-10-1-4-centralizer.v1.json`. It is mechanical evidence only.
 
 Two current Verification Records retain the scoped mathematical result and the
