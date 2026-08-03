@@ -21,7 +21,7 @@ jobs:
           python3 scripts/verify_quantum_certificate.py \
             artifacts/quantum-10-1-4.witness.json
           python3 -m unittest discover -s tests -p 'test_quantum_certificate.py' -v
-      - uses: vela-science/vela@1418c6ac4f6cc85cb0d7756cf1a96f9a9c0aa6d1 # v0.962.1
+      - uses: vela-science/vela@50ab6f267cf325988e6d903ddafa5c0070c9f015 # v0.963.0
         env:
           GH_TOKEN: ${{ github.token }}
         with:
