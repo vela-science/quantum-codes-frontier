@@ -16,11 +16,11 @@ vela check . --json
 ```
 
 The predecessor remains available at `pre-compaction/14219ad10db5`. The
-retained witness is already complete, so registering its result does not need a
-retroactive Target or Attempt. Vela's exact supersession path can propose a
-replacement for the accepted open-question Claim by binding its full Claim ID
-and root. That Submission remains `pending_review` until a separate scoped
-Verification and authorized human Decision.
+retained witness was already complete, so registering its result did not need a
+retroactive Target or Attempt. Vela's exact supersession path bound the prior
+open-question Claim by full ID and root. Two scoped Verification Records passed,
+and a separate authorized human Decision accepted the bounded replacement
+Claim. Verification did not cause acceptance.
 
 The retained quantum witness has a source-visible independent reconstruction:
 
@@ -42,6 +42,8 @@ Both records disclose the same operator, machine, repository, witness, and
 implementation; they provide actor separation, not external-participant
 independence or an audit of verifier soundness.
 
-The Proposal remains pending an authorized human Decision. Neither Verification
-changed accepted Standing. Strict repository verification remains the
+Proposal `vpr_8715dbb5e2a12442` is accepted. Its Decision establishes only that
+this exact retained witness defines an explicit `[[10,1,4]]` stabilizer code;
+it does not establish optimality, uniqueness, novelty, classification, or
+external-participant replication. Strict repository verification remains the
 publication gate.
