@@ -25,16 +25,33 @@ sources:
     url: https://github.com/leanprover-community/physlib
     # Files whose exact roots the acquisition checks on every refresh. A
     # mismatch fails the run rather than retaining different bytes under the
-    # same commit.
+    # same commit. The key is the logical name the acquisition uses; `path` is
+    # where it lives in the checkout.
     exact_roots:
-      LICENSE: sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4
-      lean-toolchain: sha256:cc346fd7850a83fb7af3902dfc378f74d8eb8c59c6d34322488269ebfe7615b1
-      lakefile: sha256:9b6608c26fa30873fb8d823eadd7f66835992389a80c3e44b62e9803c8c65c01
-      lake-manifest: sha256:a9531c3978f21e50cb72cc89c2a7644b296bee59a7f2ff92ca2408aac4a67311
-      AI-POLICY.md: sha256:a639a2c51091911123600a376c7556b52d92ffd324b041df2e2a66ec7597ed49
-      AGENTS.md: sha256:487a9754f996304b173dd871326a094f4552d27df7151d60c56d83374e7711ca
-      docs/API_MAP_GUIDE.md: sha256:0663b6828ab7635bd69a1bc5913d75c5f1b81640071f43f3db0e5e10f5d29ad1
-      docs/ReviewGuidelines.md: sha256:e28f680f6fc0767840942aaa48da28bd9983cd48db8beec4ab77dafb4dbdab0b
+      license:
+        path: LICENSE
+        sha256: sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4
+      lean_toolchain:
+        path: lean-toolchain
+        sha256: sha256:cc346fd7850a83fb7af3902dfc378f74d8eb8c59c6d34322488269ebfe7615b1
+      lakefile:
+        path: lakefile.toml
+        sha256: sha256:9b6608c26fa30873fb8d823eadd7f66835992389a80c3e44b62e9803c8c65c01
+      lake_manifest:
+        path: lake-manifest.json
+        sha256: sha256:a9531c3978f21e50cb72cc89c2a7644b296bee59a7f2ff92ca2408aac4a67311
+      ai_policy:
+        path: AI-POLICY.md
+        sha256: sha256:a639a2c51091911123600a376c7556b52d92ffd324b041df2e2a66ec7597ed49
+      agent_guidance:
+        path: AGENTS.md
+        sha256: sha256:487a9754f996304b173dd871326a094f4552d27df7151d60c56d83374e7711ca
+      api_map_guide:
+        path: docs/API_MAP_GUIDE.md
+        sha256: sha256:0663b6828ab7635bd69a1bc5913d75c5f1b81640071f43f3db0e5e10f5d29ad1
+      review_guidelines:
+        path: docs/ReviewGuidelines.md
+        sha256: sha256:e28f680f6fc0767840942aaa48da28bd9983cd48db8beec4ab77dafb4dbdab0b
 
   codetables:
     source_id: source:codetables-stabilizer
