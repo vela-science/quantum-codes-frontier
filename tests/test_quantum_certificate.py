@@ -78,9 +78,17 @@ class QuantumCertificateTests(unittest.TestCase):
                 ),
             },
         )
+        # The digest this asserted was a hand-copy of the verifier manifest's
+        # own expected.stdout_sha256. Two copies of one number mean a correct
+        # change to the reported result reddens here for a reason that has
+        # nothing to do with the mathematics, and the copy can disagree with
+        # the manifest without anything noticing. The manifest is what a
+        # reader replays against, so the manifest is what this holds the
+        # bytes to.
+        manifest = json.loads(VERIFIER.read_text())
         self.assertEqual(
-            hashlib.sha256(completed.stdout.encode()).hexdigest(),
-            "9a2282be31eef1784304ae58aa5dc00e1871fb1ba2d46c0047153c7d04e3fc35",
+            "sha256:" + hashlib.sha256(completed.stdout.encode()).hexdigest(),
+            manifest["expected"]["stdout_sha256"],
         )
 
     def test_verifier_manifest_binds_source_witness_and_output(self) -> None:
