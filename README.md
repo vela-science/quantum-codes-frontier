@@ -12,7 +12,7 @@ offers rather than silently reviving a retired queue:
 ```bash
 vela status . --json
 vela next . --json
-vela check . --json
+vela replay . --json
 ```
 
 The predecessor remains available at `pre-compaction/14219ad10db5`. The
@@ -46,5 +46,5 @@ independence or an audit of verifier soundness.
 Proposal `vpr_8715dbb5e2a12442` is accepted. Its Decision establishes only that
 this exact retained witness defines an explicit `[[10,1,4]]` stabilizer code;
 it does not establish optimality, uniqueness, novelty, classification, or
-external-participant replication. Strict repository verification remains the
+external-participant replication. Strict repository replay remains the
 publication gate.

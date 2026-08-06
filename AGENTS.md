@@ -44,7 +44,7 @@ vela submit --frontier . --claim "<bounded replacement>" \
 vela verification import . <verification.json> --as verifier:<name> --json
 vela show . <object_id> --json
 vela why . <claim_id> --json
-vela check . --json
+vela replay . --json
 ```
 
 No current Target Index is configured. If `vela next` returns no offers,
