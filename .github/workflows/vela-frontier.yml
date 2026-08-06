@@ -23,7 +23,7 @@ jobs:
           # Discovery names the shape, not one file: a test added to tests/
           # must run without anyone remembering to edit this workflow.
           python3 -m unittest discover -s tests -p 'test_*.py' -v
-      - uses: vela-science/vela@b591f8ec525a16b4fc35687b1fae385edf81a74e # v0.966.3
+      - uses: vela-science/vela@c4023f111ee88f92e6e3c7b47699499a46e83940 # v0.966.4
         env:
           GH_TOKEN: ${{ github.token }}
         with:
