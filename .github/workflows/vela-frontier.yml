@@ -21,9 +21,7 @@ jobs:
           python3 scripts/verify_quantum_certificate.py \
             artifacts/quantum-10-1-4.witness.json
           python3 -m unittest discover -s tests -p 'test_quantum_certificate.py' -v
-      # v0.966.2 ships an action.yml that still invokes `vela check`, a verb its own
-      # binary rejects, so the newest release that verifies at all is v0.966.1.
-      - uses: vela-science/vela@bf11bc02651c014cd6dd5bf23adf8c651e79559b # v0.966.1
+      - uses: vela-science/vela@b591f8ec525a16b4fc35687b1fae385edf81a74e # v0.966.3
         env:
           GH_TOKEN: ${{ github.token }}
         with:
