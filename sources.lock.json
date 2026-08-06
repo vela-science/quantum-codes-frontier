@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-08-06T04:41:53+00:00",
+  "sources": {
+    "codetables": {
+      "kind": "reference_only",
+      "unlocked": "reference only: the frontier records that this was consulted, not what it said, so no bytes are retained and there is no content root to compute",
+      "url": "https://codetables.de/"
+    },
+    "physlib": {
+      "commit": "ad1d812c1cfd269898282081384bd92aef33b278",
+      "exact_roots": {
+        "agent_guidance": {
+          "path": "AGENTS.md",
+          "sha256": "sha256:487a9754f996304b173dd871326a094f4552d27df7151d60c56d83374e7711ca",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/ad1d812c1cfd269898282081384bd92aef33b278/AGENTS.md"
+        },
+        "ai_policy": {
+          "path": "AI-POLICY.md",
+          "sha256": "sha256:a639a2c51091911123600a376c7556b52d92ffd324b041df2e2a66ec7597ed49",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/ad1d812c1cfd269898282081384bd92aef33b278/AI-POLICY.md"
+        },
+        "api_map_guide": {
+          "path": "docs/API_MAP_GUIDE.md",
+          "sha256": "sha256:0663b6828ab7635bd69a1bc5913d75c5f1b81640071f43f3db0e5e10f5d29ad1",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/ad1d812c1cfd269898282081384bd92aef33b278/docs/API_MAP_GUIDE.md"
+        },
+        "lake_manifest": {
+          "path": "lake-manifest.json",
+          "sha256": "sha256:a9531c3978f21e50cb72cc89c2a7644b296bee59a7f2ff92ca2408aac4a67311",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/ad1d812c1cfd269898282081384bd92aef33b278/lake-manifest.json"
+        },
+        "lakefile": {
+          "path": "lakefile.toml",
+          "sha256": "sha256:9b6608c26fa30873fb8d823eadd7f66835992389a80c3e44b62e9803c8c65c01",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/ad1d812c1cfd269898282081384bd92aef33b278/lakefile.toml"
+        },
+        "lean_toolchain": {
+          "path": "lean-toolchain",
+          "sha256": "sha256:cc346fd7850a83fb7af3902dfc378f74d8eb8c59c6d34322488269ebfe7615b1",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/ad1d812c1cfd269898282081384bd92aef33b278/lean-toolchain"
+        },
+        "license": {
+          "path": "LICENSE",
+          "sha256": "sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/ad1d812c1cfd269898282081384bd92aef33b278/LICENSE"
+        },
+        "review_guidelines": {
+          "path": "docs/ReviewGuidelines.md",
+          "sha256": "sha256:e28f680f6fc0767840942aaa48da28bd9983cd48db8beec4ab77dafb4dbdab0b",
+          "url": "https://raw.githubusercontent.com/leanprover-community/physlib/ad1d812c1cfd269898282081384bd92aef33b278/docs/ReviewGuidelines.md"
+        }
+      },
+      "kind": "formal_library",
+      "repo": "leanprover-community/physlib",
+      "tree": "c66f558b2dc25bbc85c51123c72b319c1a2ad91b",
+      "url": "https://github.com/leanprover-community/physlib"
+    },
+    "quantum_retained_certificate": {
+      "kind": "frontier_local_artifact",
+      "path": "artifacts/quantum-10-1-4.witness.json",
+      "sha256": "sha256:f23ac24e932de13538ac842bc2a467648aa82628577cffff6c71411e59a06a3c"
+    }
+  }
+}

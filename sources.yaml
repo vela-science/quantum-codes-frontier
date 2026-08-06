@@ -11,11 +11,15 @@
 # under. It lives here rather than in a mapping table downstream, so adding a
 # source is one edit in one repository.
 #
-# No `sources.lock.json` exists here yet. What a reader can check today is the
-# in-line pins below: the Physlib commit, tree and eight exact file roots. When
-# an acquisition run generates a lock it records the exact content hash of each
-# entry; it is never hand-written, because a hash nobody computed is worse than
-# no hash at all.
+# `sources.lock.json` records the exact content hash of each entry below. Every
+# hash in it is computed by the generator from bytes it fetched or read; none is
+# ever hand-written, because a hash nobody computed is worse than no hash at
+# all. The declared Physlib roots below are treated as assertions to check, not
+# as values to copy: the generator refetches all eight at the pinned commit and
+# fails the run on any mismatch. Regenerate with:
+#     python3 scripts/write_sources_lock.py
+# The generator is byte-identical across the Frontiers that carry it, so one
+# reader consumes every Frontier's lock.
 
 sources:
   physlib:
@@ -60,7 +64,10 @@ sources:
     kind: reference_only
     url: https://codetables.de/
     # Reference only. No bytes are retained and no observation is archived; the
-    # frontier records that the table was consulted, not what it said.
+    # frontier records that the table was consulted, not what it said. The
+    # generator therefore never fetches this url: hashing the page would record
+    # a content root for something this frontier does not retain, and a false
+    # pin is indistinguishable from a real one once it is in the lock.
     note: >-
       Published stabilizer code parameters are consulted as a reference. They
       confer no Standing, and a match against them is not a Verification.
