@@ -9,7 +9,7 @@ vendor-specific instruction copies are intentionally not used.
 Agents may:
 
 - inspect state and exact objects with `status`, `next`, `show`, `why`, and
-  `check`
+  `replay`
 - inspect one offered Target with the write-free `vela start` briefing
 - run the exact verifier named by that Target
 - retain one signed, bounded Submission binding the exact packet and verifier

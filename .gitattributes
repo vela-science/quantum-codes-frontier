@@ -1,25 +1,17 @@
 # Ordinary text is normalized across platforms. More specific rules below win.
 * text=auto eol=lf
 
-# Canonical events, proposals, receipts, and public review material are raw Git
-# blobs. Repository filters, keyword expansion, working-tree encodings, and
-# semantic merge drivers may not transform them. Vela publication also checks
-# the effective attributes and raw staged blob before moving a ref, because a
-# local .git/info/attributes file has higher precedence than this contract.
+# Canonical records are raw Git blobs. Repository filters, keyword expansion,
+# working-tree encodings, and semantic merge drivers may not transform them. A
+# local .git/info/attributes still outranks this file; this is a repository
+# contract, not an enforcement mechanism.
+#
+# records/ is `-text` rather than the scaffold's `text eol=lf` because it holds
+# content-addressed blobs whose filename is their own digest, and end-of-line
+# normalization is a byte rewrite. A sibling Frontier already stores a gzip
+# stream under records/ that normalization would strip CR pairs out of, so the
+# file would no longer hash to its own name. Nothing here is binary yet.
 .vela/** -filter -ident -working-tree-encoding -merge -text
-.vela/events/** -filter -ident -working-tree-encoding -merge diff text eol=lf
-.vela/proposals/** -filter -ident -working-tree-encoding -merge diff text eol=lf
-.vela/records/** -filter -ident -working-tree-encoding -merge diff text eol=lf
-records/** -filter -ident -working-tree-encoding -merge diff text eol=lf
-sources/** -filter -ident -working-tree-encoding -merge -text
+records/** -filter -ident -working-tree-encoding -merge -text
 artifacts/** -filter -ident -working-tree-encoding -merge -text
-review/** -filter -ident -working-tree-encoding -merge -text
-proof/** -filter -ident -working-tree-encoding -merge -text
 frontier.toml -filter -ident -working-tree-encoding -merge diff text eol=lf
-frontier.json -filter -ident -working-tree-encoding -merge diff text eol=lf
-vela.lock -filter -ident -working-tree-encoding -merge diff text eol=lf
-
-# Witnesses are evidence the frozen verifiers re-check. They can be large, so
-# they may use Git LFS. The receipt's Vela digest remains content identity; the
-# LFS object is transport and its absence is an explicit availability failure.
-witnesses/** filter=lfs diff=lfs merge=lfs -text
